@@ -1,0 +1,23 @@
+body{
+    background-color: lightblue ;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 50px;
+    row-gap: 5px;
+    column-gap: 5px;
+    background-color: lightyellow ;
+    height: 300px;
+}
+
+.item{
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    background-color: lightslategray;
+}
+
