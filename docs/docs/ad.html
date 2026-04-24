@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Associação de Aposentados</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+    }
+
+    /* TOPO */
+    header {
+      background-color: #2d6cdf;
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .usuario {
+      float: right;
+      font-size: 18px;
+    }
+
+    /* DIAS */
+    .dias {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .dias button {
+      margin: 5px;
+      padding: 15px;
+      font-size: 16px;
+      border: none;
+      background-color: #ddd;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .dias button:hover {
+      background-color: #2d6cdf;
+      color: white;
+    }
+
+    /* ATIVIDADES */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      width: 200px;
+      height: 180px;
+      background-color: white;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background-color: #e8f0ff;
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+    }
+
+    /* HORÁRIOS */
+    .horarios {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .horarios button {
+      margin: 5px;
+      padding: 10px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* AGENDAMENTOS */
+    .agendamentos {
+      background-color: white;
+      margin: 30px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .agendamentos button {
+      margin: 5px;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .alterar {
+      background-color: orange;
+      color: white;
+    }
+
+    .cancelar {
+      background-color: red;
+      color: white;
+    }
+
+    /* RODAPÉ */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  Associação de Aposentados
+  <span class="usuario">Olá, João</span>
+</header>
+
+<div class="dias">
+  <button>Hoje</button>
+  <button>Seg</button>
+  <button>Ter</button>
+  <button>Qua</button>
+  <button>Qui</button>
+  <button>Sex</button>
+  <button>Sáb</button>
+</div>
+
+<div class="container">
+
+  <!-- SMARTPHONE -->
+  <div class="card" onclick="mostrar('smartphone')">
+    <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png">
+    <h3>Smartphone</h3>
+    <div id="smartphone" class="horarios">
+      <button>07h</button>
+      <button>15h</button>
+    </div>
+  </div>
+
+  <!-- MUSCULAÇÃO -->
+  <div class="card" onclick="mostrar('musculacao')">
+    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048949.png">
+    <h3>Musculação</h3>
+    <div id="musculacao" class="horarios">
+      <button>09h</button>
+      <button>14h</button>
+      <button>16h</button>
+    </div>
+  </div>
+
+  <!-- DANÇA -->
+  <div class="card" onclick="mostrar('danca')">
+    <img src="https://cdn-icons-png.flaticon.com/512/1998/1998613.png">
+    <h3>Dança</h3>
+    <div id="danca" class="horarios">
+      <button>06h</button>
+      <button>14h</button>
+    </div>
+  </div>
+
+  <!-- ARTES -->
+  <div class="card" onclick="mostrar('artes')">
+    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920266.png">
+    <h3>Artes</h3>
+    <div id="artes" class="horarios">
+      <button>08h</button>
+      <button>15h</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="agendamentos">
+  <h2>Meus Agendamentos</h2>
+  <p>Musculação - 14h</p>
+  <p>Dança - 06h</p>
+  <button class="alterar">Alterar</button>
+  <button class="cancelar">Cancelar</button>
+</div>
+
+<footer>
+  Precisa de ajuda? Ligue: (55) 91112-1314
+</footer>
+
+<script>
+  function mostrar(id) {
+    let elemento = document.getElementById(id);
+    elemento.style.display =
+            elemento.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
